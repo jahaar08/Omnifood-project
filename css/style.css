@@ -1,0 +1,46 @@
+/*
+
+--------- 01- TYPOGRAPHY
+
+- font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+- font weights:
+default: 400
+
+- line heights:
+default: 1
+
+
+--------- 02- COLORS
+-primary: #e67e22
+-tints: 
+-shadows:  
+-accents: 
+-greys: #555
+
+
+
+--------- 05- shadows
+
+--------- 06 border-radius
+
+--------- 07- whitespace
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 /64 / 80 / 96 / 128
+
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
