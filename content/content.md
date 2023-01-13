@@ -131,7 +131,7 @@ Privacy & terms
 
 ## Sections
 
-- logo + navigation
+- logo + Navigation
 - hero 
 - featured in (small part with the logos, usually after the hero section, or sometimes the logos are placed into the hero section. For more examples: watch the video of the layout lecture -previous section-)
 - how it works
