@@ -35,12 +35,28 @@ default: 1
 * {
   margin: 0;
   padding: 0;
-
   box-sizing: border-box;
+}
+html{
+  /* font-size: 10px; */
+  /* 10px divided by 16px = 0.625 = 62.5% */
+  /* percentage of user's browser font-size setting */
+  font-size: 62.5%;
 }
 body {
   font-family: sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
+}
+.test {
+  /* max-width: 1000px; */
+  background-color: red;
+  /* padding: 100px; */
+
+  max-width: 50rem;
+  padding: 4rem;
+  font-size: 2rem;
+  color: #fff;
+
 }
