@@ -16,7 +16,7 @@ default: 1
 --------- 02- COLORS
 -primary: #e67e22
 -tints: #fdf2e9
--shadows:  
+-shadows: #cf711f 
 -accents: 
 -greys: 
 #555
@@ -47,7 +47,7 @@ html{
   font-size: 62.5%;
 }
 body {
-  font-family: sans-serif;
+  font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
@@ -95,6 +95,7 @@ body {
   display: inline-block; 
 
   font-size: 2rem;
+  font-weight: 600;
   text-decoration: none;
   border-radius: 0.9rem;
   padding: 1.6rem 3.2rem;
@@ -133,4 +134,31 @@ body {
 
 .hero-img{
   width: 100%;
+}
+.delivered-meals{
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 8rem;
+}
+.delivered-imgs{
+  display: flex;
+}
+.delivered-imgs img{
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -0.8rem;
+  border: 3px solid #fdf2e9;
+}
+.delivered-imgs img:last-child{
+  margin: 0;
+}
+.delivered-text{
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
 }
