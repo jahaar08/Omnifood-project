@@ -40,7 +40,7 @@ default: 1
   padding: 0;
   box-sizing: border-box;
 }
-html{
+html {
   /* font-size: 10px; */
   /* 10px divided by 16px = 0.625 = 62.5% */
   /* percentage of user's browser font-size setting */
@@ -52,31 +52,11 @@ body {
   font-weight: 400;
   color: #555;
 }
-.test {
-  /* max-width: 1000px; */
-  background-color: red;
-  /* padding: 100px; */
 
-  max-width: 50rem;
-  padding: 4rem;
-  font-size: 2rem;
-  color: #fff;
-
-}
-.section-hero{
-  background-color: #fdf2e9;
-  padding: 9.6rem 0;
-  
-}
-.hero{
-  max-width: 130rem;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 9.6rem;
-}
-.heading-primary{
+/* ************************************** */
+/* General REUSUABLEcomponents */
+/* ************************************** */
+.heading-primary {
   font-size: 5.2rem;
   font-weight: 700;
   line-height: 1.05;
@@ -84,15 +64,11 @@ body {
   letter-spacing: -0.5px;
   margin-bottom: 3.2rem;
 }
-.hero-description{
-  font-size: 2rem;
-  line-height: 1.6;
-  margin-bottom: 4.8rem;
-}
 
-.btn:link, .btn:visited{
+.btn:link,
+.btn:visited {
   /* in order for anchor tags to function well, add display:inline-block; cause they're inline elements */
-  display: inline-block; 
+  display: inline-block;
 
   font-size: 2rem;
   font-weight: 600;
@@ -100,61 +76,138 @@ body {
   border-radius: 0.9rem;
   padding: 1.6rem 3.2rem;
 
-    /* add animation to the button */
+  /* add animation to the button */
   /* always put transition in original 'state' */
   transition: background-color 0.3s;
 }
 
-
-.btn--full:link, .btn--full:visited{
+.btn--full:link,
+.btn--full:visited {
   background-color: #e67e22;
   color: #fff;
 }
-.btn--full:hover, .btn--full:active{
+.btn--full:hover,
+.btn--full:active {
   background-color: #cf711f;
 }
 
-.btn--out:link, .btn--out:visited{
+.btn--out:link,
+.btn--out:visited {
   background-color: #fff;
   color: #555;
 }
-.btn--out:hover, .btn--out:active{
+.btn--out:hover,
+.btn--out:active {
   background-color: #fdf2e9;
 
   /* border: 2px solid #fff; */
   /* nice trick to add border inside button (to avoid the problem when we use usual border property) */
   box-shadow: inset 0 0 0 3px #fff;
 }
-
 /* reusable class to add right margin to elements */
 /* helper class:  */
-.margin-right-sm{
+.margin-right-sm {
   margin-right: 1.6rem !important;
 }
 
-.hero-img{
+
+/* ************************************** */
+/* header */
+/* ************************************** */
+.logo {
+  height: 2.2rem;
+}
+
+/* ************************************** */
+/* navigation */
+/* ************************************** */
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+}
+.main-nav-link:link, .main-nav-link:visited {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 500;
+   /* transition should be in original 'state' which is link */
+   transition: all 0.3s;
+  
+}
+.main-nav-link:hover, .main-nav-link:active {
+  color: #cf711f;
+
+ 
+}
+
+
+
+/* ************************************** */
+/* hero section */
+/* ************************************** */
+
+
+.header {
+  background-color: #fdf2e9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* to make the header sticky we should specify the height */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+.header img {
+  height: 2.2rem;
+  /* margin-right: auto; */
+}
+
+
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 3.2rem;
+}
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9.6rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+
+
+.hero-img {
   width: 100%;
 }
-.delivered-meals{
+.delivered-meals {
   display: flex;
   align-items: center;
   gap: 1.6rem;
   margin-top: 8rem;
 }
-.delivered-imgs{
+.delivered-imgs {
   display: flex;
 }
-.delivered-imgs img{
+.delivered-imgs img {
   height: 4.8rem;
   width: 4.8rem;
   border-radius: 50%;
   margin-right: -0.8rem;
   border: 3px solid #fdf2e9;
 }
-.delivered-imgs img:last-child{
+.delivered-imgs img:last-child {
   margin: 0;
 }
-.delivered-text{
+.delivered-text {
   font-size: 1.8rem;
   font-weight: 600;
 }
