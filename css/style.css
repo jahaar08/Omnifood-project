@@ -1,74 +1,4 @@
-/*
 
---------- 01- TYPOGRAPHY
-
-- font sizes (px):
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-
-- font weights:
-default: 400
-medium: 500
-semi-bold: 600
-bold: 700
-
-- line heights:
-default: 1
-small: 1.05
-paragraph default: 1.6
-
-
---------- 02- COLORS
--primary: #e67e22
--tints: #fdf2e9
--shadows: #cf711f 
--accents: 
--greys: 
-#555
-#333
-
-
---------- 05- shadows
-
---------- 06 border-radius
-- default: 9px
---------- 07- whitespace
-
-- spacing system(px) :
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 /64 / 80 / 96 / 128
-
-
-*/
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html {
-  /* font-size: 10px; */
-  /* 10px divided by 16px = 0.625 = 62.5% */
-  /* percentage of user's browser font-size setting */
-  font-size: 62.5%;
-}
-body {
-  font-family: "Rubik", sans-serif;
-  line-height: 1;
-  font-weight: 400;
-  color: #555;
-}
-
-/* ************************************** */
-/* General REUSUABLE components */
-/* ************************************** */
-.heading-primary {
-  font-size: 5.2rem;
-  font-weight: 700;
-  line-height: 1.05;
-  color: #333;
-  letter-spacing: -0.5px;
-  margin-bottom: 3.2rem;
-}
 
 .btn:link,
 .btn:visited {
@@ -109,33 +39,12 @@ body {
   /* nice trick to add border inside button (to avoid the problem when we use usual border property) */
   box-shadow: inset 0 0 0 3px #fff;
 }
+
 /* reusable class to add right margin to elements */
 /* helper class:  */
 .margin-right-sm {
   margin-right: 1.6rem !important;
 }
-
-.container {
-  /* 1140px */
-  max-width: 120rem;
-  margin: 0 auto;
-  padding: 0 3.2rem;
-}
-.grid {
-  display: grid;
-  gap: 9.6rem;
-}
-.grid--2-cols{
-  grid-template-columns: repeat(2, 1fr);
-}
-.grid--3-cols{
-  grid-template-columns: repeat(3, 1fr);
-}
-.grid--4-cols{
-  grid-template-columns: repeat(4, 1fr);
-}
-
-
 
 /* ************************************** */
 /* header */
@@ -153,35 +62,35 @@ body {
   gap: 4.8rem;
   align-items: center;
 }
-.main-nav-link:link, .main-nav-link:visited {
+.main-nav-link:link,
+.main-nav-link:visited {
   display: inline-block;
   text-decoration: none;
   color: #333;
   font-size: 1.8rem;
   font-weight: 500;
-   /* transition should be in original 'state' which is link */
-   transition: all 0.3s;
-  
+  /* transition should be in original 'state' which is link */
+  transition: all 0.3s;
 }
-.main-nav-link:hover, .main-nav-link:active {
+.main-nav-link:hover,
+.main-nav-link:active {
   color: #cf711f;
 }
-.main-nav-link.nav-cta:link, .main-nav-link.nav-cta:visited {
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
   background-color: #e67e22;
   color: #fff;
   border-radius: 0.9rem;
   padding: 1.2rem 2.4rem;
 }
-.main-nav-link.nav-cta:hover, .main-nav-link.nav-cta:active {
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
   background-color: #cf711f;
 }
-
-
 
 /* ************************************** */
 /* hero section */
 /* ************************************** */
-
 
 .header {
   background-color: #fdf2e9;
@@ -197,10 +106,9 @@ body {
   /* margin-right: auto; */
 }
 
-
 .section-hero {
   background-color: #fdf2e9;
-  padding: 4.8rem 3.2rem;
+  padding: 4.8rem 0 9.6rem 0;
 }
 .hero {
   max-width: 130rem;
@@ -252,8 +160,49 @@ body {
 /* ************************************** */
 
 .section-how {
-padding: 9.6rem 0;
+  padding: 9.6rem 0;
+}
+.step-number{
+  font-size: 9.8rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+.step-description{
+   font-size: 1.8rem;
+   line-height: 1.8;
+}
+.step-img-box{
+  position: relative;
+
+  display: flex;
+  /* flex-direction: column;
+  align-items: center; */
+  align-items: center;
+  justify-content: center;
+}
+
+.step-img-box::before {
+  content: "";
+  display: block;
+  width: 60%;
+  /* height: 60%; */
+  /* height won't work */
+  /* 60% of parent's width */
+
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+  border: #fdf2e9;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;  
+
+
 }
 .step-img {
-  width: 50%;
+  width: 35%;
 }
