@@ -155,6 +155,17 @@
   color: #cf711f;
   font-weight: 700;
 }
+
+/* ************************************** */
+/* featured in section */
+/* ************************************** */
+
+.heading-featured-in{
+font-size: 1.4rem;
+text-transform: uppercase;
+}
+
+
 /* ************************************** */
 /* how it works section */
 /* ************************************** */
