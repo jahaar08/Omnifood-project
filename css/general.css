@@ -127,3 +127,73 @@ body {
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
 }
+
+.btn:link,
+.btn:visited {
+  /* in order for anchor tags to function well, add display:inline-block; cause they're inline elements */
+  display: inline-block;
+
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0.9rem;
+  padding: 1.6rem 3.2rem;
+
+  /* add animation to the button */
+  /* always put transition in original 'state' */
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+}
+
+.btn--out:link,
+.btn--out:visited {
+  background-color: #fff;
+  color: #555;
+}
+.btn--out:hover,
+.btn--out:active {
+  background-color: #fdf2e9;
+
+  /* border: 2px solid #fff; */
+  /* nice trick to add border inside button (to avoid the problem when we use usual border property) */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+.link:link,
+.link:visited {
+  color: #e67e22;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+/* helper/settings classes: */
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md{
+  margin-bottom: 4.8rem !important;
+}
+.center-text {
+  text-align: center;
+}
+strong {
+  font-weight: 500;
+}

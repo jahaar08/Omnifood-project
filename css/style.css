@@ -1,51 +1,3 @@
-
-
-.btn:link,
-.btn:visited {
-  /* in order for anchor tags to function well, add display:inline-block; cause they're inline elements */
-  display: inline-block;
-
-  font-size: 2rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 0.9rem;
-  padding: 1.6rem 3.2rem;
-
-  /* add animation to the button */
-  /* always put transition in original 'state' */
-  transition: background-color 0.3s;
-}
-
-.btn--full:link,
-.btn--full:visited {
-  background-color: #e67e22;
-  color: #fff;
-}
-.btn--full:hover,
-.btn--full:active {
-  background-color: #cf711f;
-}
-
-.btn--out:link,
-.btn--out:visited {
-  background-color: #fff;
-  color: #555;
-}
-.btn--out:hover,
-.btn--out:active {
-  background-color: #fdf2e9;
-
-  /* border: 2px solid #fff; */
-  /* nice trick to add border inside button (to avoid the problem when we use usual border property) */
-  box-shadow: inset 0 0 0 3px #fff;
-}
-
-/* reusable class to add right margin to elements */
-/* helper class:  */
-.margin-right-sm {
-  margin-right: 1.6rem !important;
-}
-
 /* ************************************** */
 /* header */
 /* ************************************** */
@@ -163,24 +115,24 @@
 .section-featured {
   padding: 4.8rem 0 3.2rem 0;
 }
-.heading-featured-in{
-font-size: 1.4rem;
-text-transform: uppercase;
-color:#999;
-/* color: #cf711f; */
-letter-spacing: 0.75px;
-font-weight: 500;
-text-align: center;
-margin-bottom: 2.4rem; 
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #999;
+  /* color: #cf711f; */
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
 }
 .logos {
   display: flex;
   justify-content: space-around;
 }
 .logos img {
-height: 3.2rem;
-filter: brightness(0);
-opacity: 50%;
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 50%;
 }
 
 /* ************************************** */
@@ -190,17 +142,17 @@ opacity: 50%;
 .section-how {
   padding: 9.6rem 0;
 }
-.step-number{
+.step-number {
   font-size: 9.8rem;
   font-weight: 600;
   color: #ddd;
   margin-bottom: 1.2rem;
 }
-.step-description{
-   font-size: 1.8rem;
-   line-height: 1.8;
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
 }
-.step-img-box{
+.step-img-box {
   position: relative;
 
   display: flex;
@@ -220,8 +172,6 @@ opacity: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-
 }
 .step-img-box::before {
   width: 60%;
@@ -243,8 +193,7 @@ opacity: 50%;
   padding-bottom: 45%;
   background-color: #fae5d3;
   border: #fae5d3;
-  z-index: -1;  
-
+  z-index: -1;
 }
 .step-img {
   width: 35%;
@@ -256,6 +205,43 @@ opacity: 50%;
 .section-meals {
   padding: 9.6rem 0;
 }
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.meal:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+.meal-content {
+  padding: 4.8rem;
+}
+.meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.4rem;
+}
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #51cf66;
+  color: #333;
+  border-radius: 100px;
+}
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+.tag--vegan {
+  background-color: #94d82d;
+}
+.tag--paleo {
+  background-color: #ffd43b;
+}
 .meal-title {
   font-size: 2rem;
   color: #333;
@@ -264,19 +250,47 @@ opacity: 50%;
 }
 .meal-attributes {
   list-style: none;
-  
+
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 .meal-attribute {
   font-size: 1.8rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
 }
 .meal-icon {
-   height: 2.4rem;
-   width: 2.4rem;
-   stroke: #e67e22 ;
+  height: 2.4rem;
+  width: 2.4rem;
+  /* font-size: 2.4rem; */
+  color: #e67e22;
 }
+
 .meal-img {
-  width: 100% ;
+  width: 100%;
+}
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.list-item {
+  font-size: 1.8rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.list-icon {
+  height: 3rem;
+  width: 3rem;
+  color: #e67e22;
 }
