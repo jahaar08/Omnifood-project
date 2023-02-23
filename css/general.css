@@ -28,7 +28,9 @@ paragraph default: 1.6
 -tints:
  #fdf2e9
  #fae5d3
--shadows: #cf711f 
+-shadows: 
+#cf711f 
+#45260a
 -accents: 
 -greys: 
 
@@ -137,7 +139,7 @@ body {
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
 }
-
+.btn,
 .btn:link,
 .btn:visited {
   /* in order for anchor tags to function well, add display:inline-block; cause they're inline elements */
@@ -148,6 +150,11 @@ body {
   text-decoration: none;
   border-radius: 0.9rem;
   padding: 1.6rem 3.2rem;
+
+  /* only necessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 
   /* add animation to the button */
   /* always put transition in original 'state' */
@@ -170,6 +177,7 @@ body {
   background-color: #fff;
   color: #555;
 }
+
 .btn--out:hover,
 .btn--out:active {
   background-color: #fdf2e9;
@@ -177,6 +185,17 @@ body {
   /* border: 2px solid #fff; */
   /* nice trick to add border inside button (to avoid the problem when we use usual border property) */
   box-shadow: inset 0 0 0 3px #fff;
+}
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+.btn--form:hover {
+  background-color: #fff;
+  color: #45260a;
+
 }
 .link:link,
 .link:visited {
